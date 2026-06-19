@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow & Wick | Find Your Inner Light</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars-container">
+        <div class="star shooting-star-1"></div>
+        <div class="star shooting-star-2"></div>
+        <div class="star shooting-star-3"></div>
+        <div class="sparkle sp-1">✨</div>
+        <div class="sparkle sp-2">✨</div>
+        <div class="sparkle sp-3">✨</div>
+    </div>
+
+    <header>
+        <div class="logo">Flow & Wick</div>
+        <nav>
+            <a href="#ai-space">Flow AI</a>
+            <a href="#toolbox">Wellness Toolbox</a>
+            <a href="#shop">Wick Shop</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Breathe in peace. Speak your heart.</h1>
+        <p>A safe space blending emotional AI support with the healing comfort of scented candles.</p>
+    </section>
+
+    <section id="ai-space" class="ai-section">
+        <h2>Talk to Flow AI</h2>
+        <p class="subtitle">An emotional, caring AI companion here to embrace you through anxiety and tough times.</p>
+        
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <div class="message ai-message">🌸 Hello dear friend... I can feel your energy from here. How is your heart feeling today? Tell me if you feel sad, anxious, or just need a routine change.</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Share your feelings with Flow...">
+                <button onclick="sendMessage()">Send 💖</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="toolbox" class="toolbox-section">
+        <h2>Daily Wellness Toolbox</h2>
+        <p class="subtitle">Small, actionable steps to ground your mind and soothe your soul. Check them off as you go!</p>
+        
+        <div class="toolbox-grid">
+            <div class="tool-category">
+                <h3>Mindfulness & Reflection</h3>
+                <label class="todo-item"><input type="checkbox"> Journaling prompts (3 things you are grateful for)</label>
+                <label class="todo-item"><input type="checkbox"> Breathing exercises (4-7-8 technique)</label>
+                <label class="todo-item"><input type="checkbox"> Digital detox (1 hour before bed screen-free)</label>
+                <label class="todo-item"><input type="checkbox"> Nature walks (15 mins phone-free)</label>
+                <label class="todo-item"><input type="checkbox"> Mindful listening (focus on instrumental sounds)</label>
+            </div>
+            <div class="tool-category">
+                <h3>Sensory & Environment</h3>
+                <label class="todo-item"><input type="checkbox"> Aromatherapy pairing (match scents to tasks)</label>
+                <label class="todo-item"><input type="checkbox"> Ambient lighting (warm, soft evening lights)</label>
+                <label class="todo-item"><input type="checkbox"> Clutter clearing (organize one small area)</label>
+                <label class="todo-item"><input type="checkbox"> Comfort spaces (create a cozy corner)</label>
+                <label class="todo-item"><input type="checkbox"> Soundscapes (play rain or ocean sounds)</label>
+            </div>
+            <div class="tool-category">
+                <h3>Creativity & Expression</h3>
+                <label class="todo-item"><input type="checkbox"> Color mood boards (visual collage of feelings)</label>
+                <label class="todo-item"><input type="checkbox"> Clay sculpting (tactile distraction)</label>
+                <label class="todo-item"><input type="checkbox"> Doodling (10 minutes of continuous lines)</label>
+                <label class="todo-item"><input type="checkbox"> Playlist curation (boost your energy)</label>
+                <label class="todo-item"><input type="checkbox"> Creative writing (poem of a peaceful place)</label>
+            </div>
+            <div class="tool-category">
+                <h3>Physical Well-being</h3>
+                <label class="todo-item"><input type="checkbox"> Gentle stretching (5 mins neck/shoulders)</label>
+                <label class="todo-item"><input type="checkbox"> Hydration tracking (keep a water bottle near)</label>
+                <label class="todo-item"><input type="checkbox"> Herbal tea ritual (caffeine-free evening tea)</label>
+                <label class="todo-item"><input type="checkbox"> Progressive muscle relaxation (tense & release)</label>
+                <label class="todo-item"><input type="checkbox"> Consistent sleep schedule (wake/sleep routine)</label>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="shop-section">
+        <h2>Our Scented Candles</h2>
+        <p class="subtitle">Hand-poured remedies for your soul.</p>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">💜</div>
+                <h3>Lavender Calm</h3>
+                <p>Perfect for soothing anxiety and deep sleep.</p>
+                <div class="price">$14.99</div>
+                <button class="add-btn" onclick="addToCart('Lavender Calm', 14.99)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">💛</div>
+                <h3>Citrus Energy</h3>
+                <p>Designed to lift depression and spark joy.</p>
+                <div class="price">$16.99</div>
+                <button class="add-btn" onclick="addToCart('Citrus Energy', 16.99)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🌿</div>
+                <h3>Eucalyptus Flow</h3>
+                <p>Clears the mind and brings mental clarity.</p>
+                <div class="price">$15.99</div>
+                <button class="add-btn" onclick="addToCart('Eucalyptus Flow', 15.99)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cart-section">
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items">Your cart is empty.</div>
+        <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+        <button class="checkout-btn" onclick="checkout()">Proceed to Purchase (Simulation)</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Flow & Wick. You are never alone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

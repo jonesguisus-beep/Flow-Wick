@@ -1,0 +1,173 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #1a0836, #3b1c6e, #6a2bc4, #aa66cc);
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s ease infinite;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- COSMIC BACKGROUND EFFECTS (Shooting Stars & Sparkles) --- */
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(90deg, #fff, rgba(255,255,255,0));
+    border-radius: 50%;
+    opacity: 0;
+    transform: rotate(-45deg);
+}
+
+.shooting-star-1 { top: 10%; left: 80%; animation: shoot 6s infinite ease-in-out; }
+.shooting-star-2 { top: 30%; left: 90%; animation: shoot 8s infinite 2s ease-in-out; }
+.shooting-star-3 { top: 60%; left: 75%; animation: shoot 10s infinite 4s ease-in-out; }
+
+@keyframes shoot {
+    0% { transform: translate(0, 0) rotate(-45deg) scale(0); opacity: 0; width: 0px; }
+    10% { opacity: 1; width: 80px; }
+    30% { transform: translate(-400px, 400px) rotate(-45deg) scale(1); opacity: 0; width: 0px; }
+    100% { opacity: 0; }
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 20px;
+    animation: twinkle 4s infinite alternate ease-in-out;
+}
+.sp-1 { top: 15%; left: 15%; animation-delay: 0.5s; }
+.sp-2 { top: 45%; left: 85%; animation-delay: 1.5s; }
+.sp-3 { top: 75%; left: 10%; animation-delay: 2.5s; }
+
+@keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(0.8) rotate(0deg); text-shadow: 0 0 5px #fff; }
+    100% { opacity: 1; transform: scale(1.3) rotate(15deg); text-shadow: 0 0 15px #ffb703; }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffb703;
+    text-shadow: 0 0 10px #ffb703;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 160px 20px 60px 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    animation: pulse 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); text-shadow: 0 0 10px rgba(255,255,255,0.2); }
+    100% { transform: scale(1.04); text-shadow: 0 0 30px rgba(234, 179, 8, 0.9); }
+}
+
+/* Common Section Layout */
+.ai-section, .toolbox-section, .shop-section, .cart-section {
+    position: relative;
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+}
+
+.subtitle {
+    margin-bottom: 40px;
+    color: #e2e8f0;
+}
+
+/* AI Chat Section */
+.chat-container {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.chat-box {
+    height: 320px;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 15px;
+}
+
+.message {
+    padding: 14px 20px;
+    border-radius: 18px;
+    max-width: 80%;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.ai-message {
+    background: rgba(168, 85, 247, 0.35);
+    align-self: flex-start;
+}
